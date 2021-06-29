@@ -8,11 +8,11 @@
     <link rel="icon" type="image/x-icon" href="Poisson.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body style="background-color: beige;"><!--background-image: url(Poisson.jpg);-->
-    <h1 class="mt-5 mb-5" style="text-align: center;" id="titre">Chat vs Souris</h1>
+<body style="background-color: beige; background-image: url(Poisson.jpg);"><!--background-image: url(Poisson.jpg);-->
+    <h1 class="mt-5 mb-5" style="text-align: center; color: white">Chat vs Souris</h1>
     <div style="text-align: center">
-        <h3 class="mb-4">Règle du jeu</h3>
-        <p>
+        <h3 class="mb-4" style="color: white;">Règle du jeu</h3>
+        <p style="color: white;">
             Les règle du jeu sont simple.<br>
             Il y a un chat et plusieurs souris.<br>
             Le but du chat est de capturer toutes les souris.<br>
@@ -21,13 +21,13 @@
             Si les souris arrivent à échapper au chat, le chat perd une vie et abandonne arriver à 0.<br>
         </p>
     </div>
-    <div class="container mt-5 mb-5 border border-color: black" style="background-color: white;">
+    <div class="container mt-5 mb-5 border border-color: white" style="background: rgba(255, 255, 255, 0.2);">
 
         <div class="row mt-5 mb-5">
 
-            <h1 style="text-align: center;">Chat</h1>
-            <h4 style="text-align: center;" id="pv-chasseur">Nombre de vie : 5</h4>
-            <button class="btn fs-3 mt-5 border" id="alea">Afficher une couleur aléatoire</button>
+            <h1 style="text-align: center; color: white;">Chat</h1>
+            <h4 style="text-align: center; color: white;" id="pv-chasseur">Nombre de vie : 5</h4>
+            <button class="btn fs-3 mt-5 border" style="color: black; background: rgba(255, 255, 255, 0.4);" id="alea">Afficher une couleur aléatoire</button>
 
         </div>
 
@@ -35,8 +35,8 @@
 
             <div class="col">
 
-                <button id="Rouge" class="btn fs-3 mt-5" style="background-color: red;">Petite Souris : 0</button>
-                <button id="Cyan" class="btn fs-3 mt-5" style="background-color: cyan;">Petite Souris : 0</button>
+                <button id="Rouge" class="btn fs-3 mt-5" style="background-color: red;">(A) Petite Souris R : 0</button>
+                <button id="Cyan" class="btn fs-3 mt-5" style="background-color: cyan;">(Q) Petite Souris C : 0</button>
 
             </div>
 
@@ -49,8 +49,8 @@
 
             <div class="col d-flex align-items-end flex-column">
 
-                <button id="Violet" class="btn fs-3 mt-5" style="background-color: plum;">Petite Souris : 0</button>
-                <button id="Gris" class="btn fs-3 mt-5" style="background-color: grey;">Petite Souris : 0</button>
+                <button id="Violet" class="btn fs-3 mt-5" style="background-color: plum;">(P) Petite Souris Vi: 0</button>
+                <button id="Gris" class="btn fs-3 mt-5" style="background-color: grey;">(M) Petite Souris G: 0</button>
 
             </div>
 
@@ -64,8 +64,8 @@
 
             <div class="col-6 d-flex justify-content-between mt-5 ">
 
-                <button id="Vert" class="btn fs-3" style="background-color: greenyellow;">Petite Souris : 0</button>
-                <button id="Jaune" class="btn fs-3" style="background-color: yellow;">Petite Souris : 0</button>
+                <button id="Vert" class="btn fs-3" style="background-color: greenyellow;">(S) Petite Souris Ve: 0</button>
+                <button id="Jaune" class="btn fs-3" style="background-color: yellow;">(L) Petite Souris J: 0</button>
 
             </div>
             

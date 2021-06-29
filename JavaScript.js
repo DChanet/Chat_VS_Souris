@@ -67,85 +67,121 @@ Alea.addEventListener('click', function() {
 
 Rouge.addEventListener('click', function() {
     if(Test.style.backgroundColor == "red"){
-        for (let i = couleur.length-1; i>=0; i--){
-            if(couleur[i] == "Rouge"){
-                couleur.splice(i,1);
-            }
-        }
         Test.style.backgroundColor = "white";
         Rouge.style.backgroundColor = "black";
+        Rouge.style.color = "red";
+    }
+    else {
+        if(nbPV > 0 && Test.style.backgroundColor != "white" && Rouge.style.backgroundColor != "black"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+            Test.style.backgroundColor = "white";
+        }
+        Test.style.backgroundColor = "white";
     }
 });
 
 Cyan.addEventListener('click', function() {
     if(Test.style.backgroundColor == "cyan"){
-        for (let i = couleur.length-1; i>=0; i--){
-            if(couleur[i] == "Cyan"){
-                couleur.splice(i,1);
-            }
-        }
         Test.style.backgroundColor = "white";
         Cyan.style.backgroundColor = "black";
+        Cyan.style.color = "cyan";
+    }
+    else {
+        if(nbPV > 0 && Test.style.backgroundColor != "white" && Cyan.style.backgroundColor != "black"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+            Test.style.backgroundColor = "white";
+        }
+        Test.style.backgroundColor = "white";
     }
 });
 
 Vert.addEventListener('click', function() {
     if(Test.style.backgroundColor == "greenyellow"){
-        for (let i = couleur.length-1; i>=0; i--){
-            if(couleur[i] == "Vert"){
-                couleur.splice(i,1);
-            }
-        }
         Test.style.backgroundColor = "white";
         Vert.style.backgroundColor = "black";
+        Vert.style.color = "greenyellow";
+    }
+    else {
+        if(nbPV > 0 && Test.style.backgroundColor != "white" && Vert.style.backgroundColor != "black"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+            Test.style.backgroundColor = "white";
+        }
+        Test.style.backgroundColor = "white";
     }
 });
 
 Jaune.addEventListener('click', function() {
     if(Test.style.backgroundColor == "yellow"){
-        for (let i = couleur.length-1; i>=0; i--){
-            if(couleur[i] == "Jaune"){
-                couleur.splice(i,1);
-            }
-        }
         Test.style.backgroundColor = "white";
         Jaune.style.backgroundColor = "black";
+        Jaune.style.color = "yellow";
+        
+    }
+    else {
+        if(nbPV > 0 && Test.style.backgroundColor != "white" && Jaune.style.backgroundColor != "black"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+            Test.style.backgroundColor = "white";
+        }
+        Test.style.backgroundColor = "white";
     }
 });
 
 Violet.addEventListener('click', function() {
     if(Test.style.backgroundColor == "plum"){
-        for (let i = couleur.length-1; i>=0; i--){
-            if(couleur[i] == "Violet"){
-                couleur.splice(i,1);
-            }
-        }
         Test.style.backgroundColor = "white";
         Violet.style.backgroundColor = "black";
+        Violet.style.color = "plum";
+    }
+    else {
+        if(nbPV > 0 && Test.style.backgroundColor != "white" && Violet.style.backgroundColor != "black"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+            Test.style.backgroundColor = "white";
+        }
+        Test.style.backgroundColor = "white";
     }
 });
 
 Gris.addEventListener('click', function() {
     if(Test.style.backgroundColor == "grey"){
-        for (let i = couleur.length-1; i>=0; i--){
-            if(couleur[i] == "Gris"){
-                couleur.splice(i,1);
-            }
-        }
         Test.style.backgroundColor = "white";
         Gris.style.backgroundColor = "black";
+        Gris.style.color = "grey";
+    }
+    else {
+        if(nbPV > 0 && Test.style.backgroundColor != "white" && Gris.style.backgroundColor != "black"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+            Test.style.backgroundColor = "white";
+        }
+        Test.style.backgroundColor = "white";
     }
 });
 
 
 /* Pour la touche du clavier */
+/* Revoir les else car ils sont mal fait */
+
 /* Rouge */
 document.addEventListener('keyup', (event) => {
     const nomTouche = event.key;
     if (nomTouche === 'a' && Test.style.backgroundColor == "red") {
-        nbPV--;
-        PV.innerHTML = "Nombre de vie : "+nbPV;
+        if(Rouge.style.backgroundColor == "red"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+        }
         Test.style.backgroundColor = "white";
+    }
+    else {
+        if(nomTouche === 'a' && Test.style.backgroundColor != "red"){
+            Test.style.backgroundColor = "white";
+            Rouge.style.backgroundColor = "black";
+            Rouge.style.color = "red";
+        }
     }
 }, false);
 
@@ -155,9 +191,18 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keyup', (event) => {
     const nomTouche = event.key;
     if (nomTouche === 'q' && Test.style.backgroundColor == "cyan") {
-        nbPV--;
-        PV.innerHTML = "Nombre de vie : "+nbPV;
+        if(Cyan.style.backgroundColor == "cyan"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+        }
         Test.style.backgroundColor = "white";
+    }
+    else {
+        if(nomTouche === 'q' && Test.style.backgroundColor != "cyan"){
+            Test.style.backgroundColor = "white";
+            Cyan.style.backgroundColor = "black";
+            Cyan.style.color = "cyan";
+        }
     }
 }, false);
 
@@ -167,9 +212,18 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keyup', (event) => {
     const nomTouche = event.key;
     if (nomTouche === 's' && Test.style.backgroundColor == "greenyellow") {
-        nbPV--;
-        PV.innerHTML = "Nombre de vie : "+nbPV;
+        if(Vert.style.backgroundColor == "greenyellow"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+        }
         Test.style.backgroundColor = "white";
+    }
+    else {
+        if(nomTouche === 's' && Test.style.backgroundColor != "greenyellow"){
+            Test.style.backgroundColor = "white";
+            Vert.style.backgroundColor = "black";
+            Vert.style.color = "greenyellow";
+        }
     }
 }, false);
 
@@ -179,9 +233,18 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keyup', (event) => {
     const nomTouche = event.key;
     if (nomTouche === 'l' && Test.style.backgroundColor == "yellow") {
-        nbPV--;
-        PV.innerHTML = "Nombre de vie : "+nbPV;
+        if(Jaune.style.backgroundColor == "yellow"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+        }
         Test.style.backgroundColor = "white";
+    }
+    else {
+        if(nomTouche === 'l' && Test.style.backgroundColor != "yellow"){
+            Test.style.backgroundColor = "white";
+            Jaune.style.backgroundColor = "black";
+            Jaune.style.color = "yellow";
+        }
     }
 }, false);
 
@@ -192,9 +255,18 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keyup', (event) => {
     const nomTouche = event.key;
     if (nomTouche === 'p' && Test.style.backgroundColor == "plum") {
-        nbPV--;
-        PV.innerHTML = "Nombre de vie : "+nbPV;
+        if(Violet.style.backgroundColor == "plum"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+        }
         Test.style.backgroundColor = "white";
+    }
+    else {
+        if(nomTouche === 'p' && Test.style.backgroundColor != "plum"){
+            Test.style.backgroundColor = "white";
+            Violet.style.backgroundColor = "black";
+            Violet.style.color = "plum";
+        }
     }
 }, false);
 
@@ -204,8 +276,17 @@ document.addEventListener('keyup', (event) => {
 document.addEventListener('keyup', (event) => {
     const nomTouche = event.key;
     if (nomTouche === 'm' && Test.style.backgroundColor == "grey") {
-        nbPV--;
-        PV.innerHTML = "Nombre de vie : "+nbPV;
+        if(Gris.style.backgroundColor == "grey"){
+            nbPV--;
+            PV.innerHTML = "Nombre de vie : "+nbPV;
+        }
         Test.style.backgroundColor = "white";
+    }
+    else {
+        if(nomTouche === 'm' && Test.style.backgroundColor != "grey"){
+            Test.style.backgroundColor = "white";
+            Gris.style.backgroundColor = "black";
+            Gris.style.color = "grey";
+        }
     }
 }, false);
